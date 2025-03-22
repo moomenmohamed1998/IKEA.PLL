@@ -1,3 +1,4 @@
+using IKEA.BLL.Services.DepartmentsServices;
 using IKEA.DAL.Persistance.Data;
 using IKEA.DAL.Persistance.Repositories.Departments;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace IKEA.PLL
             });
 
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            builder.Services.AddScoped<IDepartmentsServices,DepartmentsServices>();
             #endregion
 
             var app = builder.Build();

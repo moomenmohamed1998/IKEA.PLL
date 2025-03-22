@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using IKEA.PLL.Models;
+using IKEA.PLL.ViewModels;
 
 namespace IKEA.PLL.Controllers;
 
