@@ -10,7 +10,7 @@ namespace IKEA.BLL.Services.DepartmentsServices
   public  class DepartmentsServices: IDepartmentsServices
     {
 
-        private IDepartmentRepository Repository;
+        private IDepartmentRepository  Repository;
 
         public DepartmentsServices(IDepartmentRepository _repositoryc)
         {
