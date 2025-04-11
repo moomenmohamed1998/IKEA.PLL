@@ -1,6 +1,8 @@
 using IKEA.BLL.Services.DepartmentsServices;
+using IKEA.BLL.Services.EmploessServices;
 using IKEA.DAL.Persistance.Data;
 using IKEA.DAL.Persistance.Repositories.Departments;
+using IKEA.DAL.Persistance.Repositories.Emplyess;
 using Microsoft.EntityFrameworkCore;
 
 namespace IKEA.PLL
@@ -11,7 +13,6 @@ namespace IKEA.PLL
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             #region congigue sercies
             builder.Services.AddControllersWithViews();
 
@@ -24,11 +25,14 @@ namespace IKEA.PLL
 
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             builder.Services.AddScoped<IDepartmentsServices,DepartmentsServices>();
+
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            builder.Services.AddScoped<IEmploteeservices, EmploessServices>();
             #endregion
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+
             #region cofigure Ppelines (MiddleWares)
 
             if (!app.Environment.IsDevelopment())

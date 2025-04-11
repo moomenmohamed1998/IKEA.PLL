@@ -19,7 +19,6 @@ namespace IKEA.BLL.Services.DepartmentsServices
         int UpdateDepartment(int id, UpdatedDepartmentDto departmentDto);
         
         bool DeleteDepartment(int id);
-
-
+        int UpdateDepartment(UpdatedDepartmentDto departmentDto);
     }
 }
