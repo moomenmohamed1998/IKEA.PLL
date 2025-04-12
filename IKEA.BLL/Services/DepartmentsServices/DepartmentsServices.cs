@@ -95,5 +95,9 @@ namespace IKEA.BLL.Services.DepartmentsServices
             return Departments;        
         }
 
+        public int UpdateDepartment(UpdatedDepartmentDto departmentDto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
