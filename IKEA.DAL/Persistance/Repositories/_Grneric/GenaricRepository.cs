@@ -30,13 +30,13 @@ namespace IKEA.DAL.Persistance.Repositories._Grneric
             dbContext.Set<T>().Update(item);
             return dbContext.SaveChanges();
         }
-        public IEnumerable<T> GetAll(bool withTracking = true)
+        public IQueryable<T> GetAll(bool withTracking = true)
         {
             if (withTracking)
             {
-                return dbContext.Set<T>().Where(D => D.IsDeleted == false).AsNoTracking().ToList();
+                return dbContext.Set<T>().AsNoTracking();
             }
-            return dbContext.Set<T>().Where(D => D.IsDeleted == false).ToList();
+            return dbContext.Set<T>();
         }
         public T? GetById(int id)
         {

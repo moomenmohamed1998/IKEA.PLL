@@ -19,6 +19,6 @@ namespace IKEA.BLL.Services.EmploessServices
         int UpdateDepartment(UpdatedEmployeeDto employeeDto);
 
         bool DeleteEmployee(int id);
-
+        int UpdateEmployee(UpdatedEmployeeDto employeeDto);
     }
 }
