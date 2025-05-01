@@ -28,6 +28,9 @@ namespace IKEA.PLL.Controllers
         public IActionResult Index()
         {
             var Departments = departmentsServices.GetALLDepartments();
+            ViewData["Message"] = "Hello from ViewData";
+            ViewBag.Message = "Hello From ViewBag";
+            string Name = ViewBag.Message;
             return View(Departments);
 
         }
